@@ -138,12 +138,12 @@ class OpenShiftBase(object):
                 self.container_runtime,
                 'images',
                 self.container_image,
-                '--format', 'json',
+                '--quiet',
             ]
         )
 
         # If the list of images has a length of 0, then the image doesn't exist
-        if len(json.loads(images)) == 0:
+        if len(images) == 0:
             logger.warn(
                 'The container does not exist: {}'.format(self.container_image)
             )
@@ -193,7 +193,6 @@ class OpenShiftBase(object):
         subprocess.call([
             self.container_runtime,
             'build',
-            '--layers',
             '--tag', self.container_image,
             '--build-arg', 'OPENSHIFT_VERSION={}'.format(
                 self.openshift_version),

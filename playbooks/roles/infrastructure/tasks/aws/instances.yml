@@ -9,7 +9,7 @@
             source: http://{{ hostvars.bastion.private_ip_address }}/bootstrap.ign
             verification: {}
         timeouts: {}
-        version: "2.1.0"
+        version: "3.2.0"
       networkd: {}
       passwd: {}
       storage: {}
@@ -21,7 +21,7 @@
             source: http://{{ hostvars.bastion.private_ip_address }}/master.ign
             verification: {}
         timeouts: {}
-        version: "2.1.0"
+        version: "3.2.0"
       networkd: {}
       passwd: {}
       storage: {}
@@ -33,7 +33,7 @@
             source: http://{{ hostvars.bastion.private_ip_address }}/worker.ign
             verification: {}
         timeouts: {}
-        version: "2.1.0"
+        version: "3.2.0"
       networkd: {}
       passwd: {}
       storage: {}
